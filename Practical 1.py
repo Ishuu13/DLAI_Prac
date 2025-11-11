@@ -13,3 +13,9 @@ print("Keras version:",keras.__version__)
 !pip install torch torchvision torchaudio
 import torch
 print("PyTorch version:",torch.__version__)
+
+#Theano
+!pip install Theano
+import theano
+print("Theano version:",theano.__version__)
+
