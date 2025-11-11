@@ -49,3 +49,12 @@ print("TensorFlow version:", tf.__version__)
  score = model.evaluate(x_test, y_test, verbose=0)
  print(f"Test Loss: {score[0]:.4f}")
  print(f"Test Accuracy: {score[1]:.4f}")
+
+# Load the dataset again to access the original unflattened data
+ (x_train_original, y_train_original), (x_test_original, y_test_original) = keras.datasets.mnist.load_data()
+ # Select the first image from the original training data
+ image_to_plot = x_train_original[0]
+ # Plot the image
+ plt.matshow(image_to_plot, cmap=plt.get_cmap('gray'))
+ plt.title("Sample Image from Training Data")
+ plt.show()
